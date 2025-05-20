@@ -15,7 +15,9 @@
 
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -25,7 +27,7 @@ body {
   line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -36,259 +38,386 @@ a {
   color: var(--accent);
   text-decoration: none;
 }
-a:hover { text-decoration: underline; }
+a:hover {
+  text-decoration: underline;
+}
+
 
 /*————————————————————————————————————
-  2. Header & Nav
+  2. Header & Navigation
 ————————————————————————————————————*/
-header { background: var(--nav-bg); }
+header {
+  background: var(--nav-bg);
+}
 header .container {
-  max-width: 1200px; margin: 0 auto; padding: 1rem;
-  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav-list {
-  display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none;
-}
-.nav-list a { color: var(--fg); font-weight: 500; }
+
 
 /*————————————————————————————————————
-  3. Layout
+  3. Layout & Sidebar
 ————————————————————————————————————*/
 .content-wrapper {
-  max-width: 1200px; margin: 2rem auto; padding: 0 1rem;
-  display: flex; gap: 2rem; align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1rem;
 }
-.content-wrapper > aside.sidebar { flex: 0 0 220px; }
-.content-wrapper > main            { flex: 1; min-width: 280px; }
+.content-wrapper > aside.sidebar,
+.content-wrapper > main {
+  width: 100%;
+}
 
-/*————————————————————————————————————
-  4. Sidebar
-————————————————————————————————————*/
 .sidebar {
-  background: var(--card-bg); padding: 1.5rem;
-  border-radius: var(--border-radius); text-align: center;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
 }
 .sidebar .avatar {
-  width: 100%; max-width: 160px; margin-bottom: 1rem;
+  width: 100%;
+  max-width: 160px;
+  margin-bottom: 1rem;
   border-radius: var(--border-radius);
 }
-.sidebar .author-name { margin: 0.5rem 0 0.25rem; }
-.sidebar .author-bio  { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.sidebar .author-name {
+  margin: 0.5rem 0 0.25rem;
+}
+.sidebar .author-bio {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 
 /*————————————————————————————————————
-  5. Roll List (Homepage)
+  4. Homepage Roll List
 ————————————————————————————————————*/
 .roll-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   margin: 0;
   padding: 0;
   list-style: none;
-  align-items: flex-start;
 }
-
+.roll-list.block {
+  display: block;
+}
+.roll-list.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 .roll-item {
-  /* card styling */
   background: var(--card-bg);
   border-radius: var(--border-radius);
   overflow: hidden;
+  margin: 0 0 1.5rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
-
-  /* flex sizing */
-  flex: 1 1 100%;
-}
-
-.roll-thumb { display: block; }
-.roll-thumb img {
-  width: 100%; height: auto; object-fit: contain;
-  background: var(--card-bg);
-}
-.roll-item .content { padding: 1rem; }
-.roll-item h3 { font-size: 1.4rem; margin: 0 0 0.5rem; }
-.roll-item p  { margin: 0; font-size: 1rem; line-height: 1.6; }
-
-/*————————————————————————————————————
-  6. Chips (Date, Film, Camera, Lens)
-————————————————————————————————————*/
-.meta-specs {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
-  margin: 0.5rem 0 1rem;
-}
-.meta-specs .spec {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  background: rgba(255,255,255,0.05);
-  padding: 0.25rem 0.6rem; border-radius: var(--border-radius);
-  font-size: 0.85rem; color: var(--fg);
-}
-.meta-specs .spec i {
-  font-size: 1rem; color: var(--accent);
-}
-.meta-specs .spec time {
-  display: inline; margin: 0; color: var(--fg);
-}
-
-/*————————————————————————————————————
-  7. Masonry Gallery
-————————————————————————————————————*/
-.roll-gallery {
-  column-width: 240px; column-gap: 1rem;
-}
-.roll-gallery a {
-  display: inline-block; width: 100%; margin-bottom: 1rem;
-  break-inside: avoid;
-}
-.roll-gallery img {
-  width: 100%; height: auto; object-fit: contain;
-  background: var(--card-bg);
-}
-
-/*————————————————————————————————————
-  8. Single-Post Meta & Body
-————————————————————————————————————*/
-.post-meta-card {
-  background: var(--card-bg); border-radius: var(--border-radius);
-  padding: 1.5rem 1rem; margin: 0 auto 2rem; max-width: 1200px;
-  text-align: left;
-}
-.post-meta-card h2 { font-size: 2rem; margin-bottom: 0.5rem; }
-.roll-description {
-  margin: 0; font-size: 1.1rem; line-height: 1.4;
-}
-.post-body {
-  max-width: 1200px; margin: 0 auto 2rem; padding: 0 1rem;
-  font-size: 1rem; line-height: 1.6;
-}
-.post-body p + p { margin-top: 1rem; }
-
-/*————————————————————————————————————
-  9. EXIF (Single-Post)
-————————————————————————————————————*/
-.exif {
-  list-style: none; padding: 0.5rem; margin: 0.5rem 0;
-  background: var(--nav-bg); border-radius: var(--border-radius);
-  font-size: 0.85rem;
-}
-.exif li { margin: 0.25rem 0; }
-
-/*————————————————————————————————————
- 10. Footer
-————————————————————————————————————*/
-footer {
-  background: var(--nav-bg); color: var(--muted);
-  text-align: center; padding: 1rem 0;
-}
-footer .container {
-  max-width: 1200px; margin: 0 auto; padding: 0 1rem;
-  font-size: 0.85rem;
-}
-footer .container a { color: var(--accent); }
-
-/*————————————————————————————————————
- 11. Responsive
-————————————————————————————————————*/
-@media (max-width: 800px) {
-  .content-wrapper { flex-direction: column; }
-  .content-wrapper > aside.sidebar { margin-bottom: 2rem; }
-}
-@media (max-width: 600px) {
-  .roll-list { display: block; }
-  .roll-gallery { column-width: 100%; }
-}
-@media (min-width: 900px) {
-  .roll-item {
-    /* two columns with 2rem gap */
-    flex: 1 1 calc((100% - 2rem)/2);
-  }
-}
-@media (min-width: 1080px) {
-  .roll-gallery { column-count: 3; }
-}
-
-
-.roll-thumb {
-  display: block;
 }
 .roll-thumb img {
   width: 100%;
   height: auto;
   object-fit: contain;
   background: var(--card-bg);
-  display: block;
 }
-
-/* content padding */
 .roll-item .content {
   padding: 1rem;
   flex: 1;
 }
+.roll-item h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+.roll-item p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-@media (max-width: 600px) {
-  /* 1) Make the entire layout a single column */
+
+/*————————————————————————————————————
+  5. Chips (Date, Film, Camera, Lens)
+————————————————————————————————————*/
+.meta-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+.meta-specs .spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.05);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  color: var(--fg);
+}
+.meta-specs .spec i {
+  font-size: 1rem;
+  color: var(--accent);
+}
+.meta-specs .spec time {
+  display: inline;
+  margin: 0;
+  color: var(--fg);
+}
+
+
+/*————————————————————————————————————
+  6. Masonry Gallery
+————————————————————————————————————*/
+.roll-gallery {
+  column-width: 240px;
+  column-gap: 1rem;
+}
+.roll-gallery a {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+.roll-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: var(--card-bg);
+}
+
+
+/*————————————————————————————————————
+  7. Single-Post Meta & Body
+————————————————————————————————————*/
+.post-meta-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 1rem;
+  margin: 0 auto 2rem;
+  max-width: 1200px;
+  text-align: left;
+}
+.post-meta-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.roll-description {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+.post-body {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.post-body p + p {
+  margin-top: 1rem;
+}
+
+
+/*————————————————————————————————————
+  8. EXIF (Single-Post)
+————————————————————————————————————*/
+.exif {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background: var(--nav-bg);
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+}
+.exif li {
+  margin: 0.25rem 0;
+}
+
+
+/*————————————————————————————————————
+  9. Footer
+————————————————————————————————————*/
+footer {
+  background: var(--nav-bg);
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem 0;
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 0.85rem;
+}
+footer .container a {
+  color: var(--accent);
+}
+
+
+/*————————————————————————————————————
+ 10. Responsive — Tablet & Up
+————————————————————————————————————*/
+@media (min-width: 600px) {
   .content-wrapper {
-    flex-direction: column;
+    max-width: 1200px;
+    margin: 2rem auto;
+    flex-direction: row;
   }
-  .content-wrapper > aside.sidebar,
+  .content-wrapper > aside.sidebar {
+    flex: 0 0 220px;
+    margin-bottom: 0;
+  }
   .content-wrapper > main {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex: 1;
+    min-width: 280px;
   }
 
-  /* 2) Homepage: force cards full-width, one per row */
   .roll-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
   .roll-item {
     flex: 1 1 100%;
-    max-width: 100%;
-    margin: 0 0 2rem;
-  }
-
-  /* 3) Single page: meta-card and body full-width */
-  .post-meta-card,
-  .post-body {
-    max-width: 100%;
-    margin: 0 0 1.5rem;
-    padding: 0 1rem;
-  }
-
-  /* 4) Tweak any gutters */
-  .meta-specs {
-    margin: 0.5rem 0 1rem;
+    margin: 0;
   }
 }
 
-/* anywhere in your stylesheet, *after* your desktop/mobile rules */
-@media (pointer: coarse) and (hover: none) {
-  /* Layout wrapper stacks on touch devices */
+
+/*————————————————————————————————————
+ 11. Responsive — Desktop (Two Cards)
+————————————————————————————————————*/
+@media (min-width: 900px) {
+  .roll-item {
+    flex: 1 1 calc((100% - 2rem)/2);
+  }
+}
+
+
+/*————————————————————————————————————
+ 12. Responsive — Large Screens (3-Column)
+————————————————————————————————————*/
+@media (min-width: 1080px) {
+  .roll-gallery {
+    column-count: 3;
+  }
+}
+
+
+/*————————————————————————————————————
+ 13. Responsive — Touch-First Mobile
+————————————————————————————————————*/
+@media (hover: none) and (pointer: coarse) {
+  /* Layout stack & full-width */
   .content-wrapper {
     flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1rem;
   }
   .content-wrapper > aside.sidebar,
   .content-wrapper > main {
-    flex: 1 1 100%;
-    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Sidebar: avatar + grid layout */
+  .content-wrapper > aside.sidebar {
+    display: grid;
+    grid-template-areas:
+      "avatar title"
+      "avatar bio";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+    padding: 1.5rem 1rem 0;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .sidebar .avatar {
+    grid-area: avatar;
+    width: 300px;
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+  .sidebar .author-name {
+    grid-area: title;
+    margin: 0;
+    font-size: 4rem;
+  }
+  .sidebar .author-bio {
+    grid-area: bio;
+    margin: 0;
+    font-size: 2.4rem; /* increased bio size */
+    color: var(--muted);
   }
 
   /* Homepage cards full-width */
   .roll-list {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
   }
   .roll-item {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin: 0 0 2rem;
+    width: 100%;
+    margin: 0 0 1.5rem;
   }
 
-  /* Single page full-width meta & body */
+  /* Post meta & body full-width */
   .post-meta-card,
   .post-body {
     max-width: 100%;
     margin: 0 0 1.5rem;
     padding: 0 1rem;
+  }
+
+  /* Gallery single column */
+  .roll-gallery {
+    column-width: 100%;
+    column-count: 1;
+  }
+
+  /* Increased mobile font sizes */
+  body {
+    font-size: 18px;
+  }
+  header .container h1 a {
+    font-size: 4rem;
+  }
+  .roll-item h3 {
+    font-size: 3.2rem;
+  }
+  .roll-item p {
+    font-size: 2.2rem;
+  }
+  .meta-specs .spec {
+    font-size: 2rem;
+    padding: 0.35rem 0.75rem;
+  }
+  .meta-specs .spec i {
+    font-size: 2.4rem;
+  }
+  .post-meta-card h2 {
+    font-size: 4.4rem;
+  }
+  .post-meta-card .roll-description {
+    font-size: 2.4rem;
+  }
+  .post-meta-card time {
+    font-size: 2rem;
+  }
+  .post-body {
+    font-size: 2.2rem;
   }
 }
 
