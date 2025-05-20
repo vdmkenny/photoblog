@@ -1,5 +1,5 @@
 ---
-title: "Chile"
+title: "Chile, Santiago"
 date: 2025-04-20
 description: "Een zakenreis naar Chile."
 showEXIF: true
