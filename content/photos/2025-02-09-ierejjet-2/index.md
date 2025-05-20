@@ -9,6 +9,6 @@ camera = 'Chinon CE-3 Memotron'
 lens = 'Chinon Auto 55mm f1.7'
 +++
 
-Ontwikkeld in rodinal met vrij hard water. Wat kalkresten zichtbaar op de negatieven.
+Deel 2 photowalk + Carnaval sfeerbeelden
 
 {{< rollgallery >}}
