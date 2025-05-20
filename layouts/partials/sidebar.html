@@ -1,0 +1,11 @@
+<aside class="sidebar">
+  {{ with .Site.Params.authorImage }}
+    <img
+      src="{{ . | relURL }}"
+      alt="{{ $.Site.Params.authorName }}"
+      class="avatar">
+  {{ end }}
+  <h2 class="author-name">{{ .Site.Params.authorName }}</h2>
+  <p class="author-bio">{{ .Site.Params.authorBio }}</p>
+</aside>
+

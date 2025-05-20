@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <section>
+    <h2>{{ .Title }}</h2>
+    <ul>
+      {{ range .Pages.ByDate.Reverse }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a> – <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+{{ template "baseof" . }}

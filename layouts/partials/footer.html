@@ -1,0 +1,20 @@
+  <div class="footer-content">
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.authorName }}. All rights reserved.</p>
+  </div>
+
+  <!-- Lightbox2 + jQuery bundle (v2.11.5) -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"
+  ></script>
+
+  <!-- Defer your options call too -->
+  <script>
+      lightbox.option({
+        resizeDuration:    0,
+        fadeDuration:      0,
+        imageFadeDuration: 0
+      });
+  </script>
+</body>
+</html>
+

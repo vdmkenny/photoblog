@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="roll-list">
+  {{ range .Site.RegularPages.ByDate.Reverse }}
+    {{ if eq .Section "photos" }}
+      {{ $p := . }}
+
+      {{/* decide which image to use for the cover */}}
+      {{ $pattern := "*.jpg" }}
+      {{ with $p.Params.cover }}
+        {{ $pattern = printf "*%s" . }}
+      {{ end }}
+      {{ $cover := $p.Resources.GetMatch $pattern }}
+      {{ if not $cover }}
+        {{ $cover = index ($p.Resources.Match "*.jpg") 0 }}
+      {{ end }}
+
+      <div class="roll-item">
+        {{ if $cover }}
+          {{ $thumb := $cover.Resize "400x" }}
+          <a href="{{ $p.Permalink }}" class="roll-thumb">
+            <img
+              src="{{ $thumb.RelPermalink }}"
+              alt="{{ $p.Title }} thumbnail"
+            >
+          </a>
+        {{ end }}
+
+        <div class="content">
+          <h3><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h3>
+          <div class="meta-specs">
+            <div class="spec">
+              <i class="fa-solid fa-calendar-days"></i>
+              <time datetime="{{ $p.Date.Format "2006-01-02" }}">
+                {{ $p.Date.Format "Jan 2, 2006" }}
+              </time>
+            </div>
+            {{ with $p.Params.film }}
+              <div class="spec"><i class="fa-solid fa-film"></i> {{ . }}</div>
+            {{ end }}
+            {{ with $p.Params.camera }}
+              <div class="spec"><i class="fa-solid fa-camera-retro"></i> {{ . }}</div>
+            {{ end }}
+            {{ with $p.Params.lens }}
+              <div class="spec"><i class="fa-solid fa-magnifying-glass"></i> {{ . }}</div>
+            {{ end }}
+          </div>
+          <p>{{ $p.Params.description }}</p>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}
+
+{{ template "baseof" . }}
+

@@ -1,0 +1,44 @@
+{{ define "main" }}
+  <article class="post-page">
+
+    <div class="post-meta-card">
+      <h2>{{ .Title }}</h2>
+    
+      <div class="meta-specs">
+        <!-- Date chip -->
+        <div class="spec">
+          <i class="fa-solid fa-calendar-days"></i>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+        </div>
+    
+        {{ with .Params.film }}
+          <div class="spec"><i class="fa-solid fa-film"></i> {{ . }}</div>
+        {{ end }}
+        {{ with .Params.camera }}
+          <div class="spec"><i class="fa-solid fa-camera-retro"></i> {{ . }}</div>
+        {{ end }}
+        {{ with .Params.lens }}
+          <div class="spec"><i class="fa-solid fa-magnifying-glass"></i> {{ . }}</div>
+        {{ end }}
+      </div>
+    
+      {{ with .Params.description }}
+        <p class="roll-description">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    {{/* Body text, if any */}}
+    {{ if (gt (len .Content) 0) }}
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+
+  </article>
+{{ end }}
+
+{{ template "baseof" . }}
+

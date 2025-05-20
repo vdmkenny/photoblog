@@ -1,0 +1,25 @@
+{{/* layouts/shortcodes/rollgallery.html */}}
+{{ $images := .Page.Resources.Match "*.jpg" }}
+<div class="roll-gallery">
+  {{ range $i, $img := $images }}
+    {{ $thumb := $img.Resize "600x" }}
+
+    {{/* Build a small HTML caption with the most useful EXIF */}}
+    {{ $caption := printf "<strong>%s (Frame %d)</strong><br>" $.Page.Title (add $i 1) }}
+    {{ with $img.Exif.Tags }}
+      {{ range $k, $v := . }}
+        {{ if in (slice "FocalLength" "FNumber" "ExposureTime" "ISO") $k }}
+          {{ $caption = printf "%s%s: %v<br>" $caption $k $v }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    <a href="{{ $img.RelPermalink }}"
+       data-lightbox="roll-{{ $.Page.File.UniqueID }}"
+       data-title="{{ $caption | safeHTML }}">
+      <img src="{{ $thumb.RelPermalink }}"
+           alt="{{ printf "%s frame %d" $.Page.Title (add $i 1) }}">
+    </a>
+  {{ end }}
+</div>
+

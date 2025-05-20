@@ -1,0 +1,12 @@
+baseURL = "https://example.com/"
+languageCode = "be-NL"
+title = "Mijn foto's"
+
+[params]
+  authorName  = "Kenny"
+  authorBio   = "Amateurfotograaf die het zichzelf graag moeilijk maakt."
+  authorImage = "images/profile.jpg"  # place your picture at static/images/profile.jpg
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true  # allows inline HTML in markdown
