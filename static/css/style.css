@@ -223,3 +223,72 @@ footer .container a { color: var(--accent); }
   padding: 1rem;
   flex: 1;
 }
+
+@media (max-width: 600px) {
+  /* 1) Make the entire layout a single column */
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .content-wrapper > aside.sidebar,
+  .content-wrapper > main {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* 2) Homepage: force cards full-width, one per row */
+  .roll-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .roll-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0 0 2rem;
+  }
+
+  /* 3) Single page: meta-card and body full-width */
+  .post-meta-card,
+  .post-body {
+    max-width: 100%;
+    margin: 0 0 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* 4) Tweak any gutters */
+  .meta-specs {
+    margin: 0.5rem 0 1rem;
+  }
+}
+
+/* anywhere in your stylesheet, *after* your desktop/mobile rules */
+@media (pointer: coarse) and (hover: none) {
+  /* Layout wrapper stacks on touch devices */
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .content-wrapper > aside.sidebar,
+  .content-wrapper > main {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Homepage cards full-width */
+  .roll-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .roll-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0 0 2rem;
+  }
+
+  /* Single page full-width meta & body */
+  .post-meta-card,
+  .post-body {
+    max-width: 100%;
+    margin: 0 0 1.5rem;
+    padding: 0 1rem;
+  }
+}
+

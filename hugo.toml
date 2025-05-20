@@ -1,4 +1,5 @@
-baseURL = "https://vdmkenny.github.io/photoblog/"
+#baseURL = "https://vdmkenny.github.io/photoblog/"
+baseURL = "http://localhost:1313/"
 languageCode = "be-NL"
 title = "Mijn foto's"
 
