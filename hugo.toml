@@ -1,13 +1,19 @@
-#baseURL = "https://vdmkenny.github.io/photoblog/"
-baseURL = "http://localhost:1313/"
+baseURL = "https://vdmkenny.github.io/photoblog/"
+#baseURL = "http://localhost:1313/"
 languageCode = "be-NL"
-title = "Mijn foto's"
+title = "Lost in the Grain"
 
 [params]
   authorName  = "Kenny"
-  authorBio   = "Amateurfotograaf die het zichzelf graag moeilijk maakt."
-  authorImage = "images/profile.jpg"  # place your picture at static/images/profile.jpg
+  authorBio   = "Amateurfotograaf die het zichzelf graag moeilijk maakt. Analoge fotografie, waarvan ik het zwart-wit meestal zelf ontwikkel."
+  authorImage = "images/profile.jpg"
 
 [markup]
   [markup.goldmark.renderer]
     unsafe = true  # allows inline HTML in markdown
+
+[taxonomies]
+  tag     = "tags"
+  camera  = "cameras"
+  lens    = "lenses"
+

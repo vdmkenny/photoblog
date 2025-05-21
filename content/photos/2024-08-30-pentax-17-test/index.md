@@ -4,12 +4,12 @@ draft = false
 title = 'Pentax 17 Test'
 description = 'First attempt with this new camera.'
 camera = 'Pentax 17'
-film = 'Unknown, very expired'
+film = 'Vervallen Fujifilm?'
 cover = 'Untitled_63.jpg'
 +++
 
-I forgot what film this was. I believe this was a roll of expired Fujifilm that was improperly stored.
-Results were extremely grainy, and needed to be pushed a lot during scanning to get anything useable.
-Partially taken in Bruges and Aalst.
+Ik herinner me niet meer welke film dit was. Hoogstwaarschijnlijk zeer vervallen Fujifilm (C200?) die niet goed bewaard is. 
+Als gevolg zeer korrelig, weinig in de schaduw. Moest zeer hard pushen tijdens het scannen om er iets uit te halen.
+Gedeeltelijk genomen in Brugge en Aalst.
 
 {{< rollgallery >}}
