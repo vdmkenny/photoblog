@@ -13,6 +13,9 @@
           </time>
         </div>
     
+        {{ with .Params.location }}
+          <div class="spec"><i class="fa-solid fa-location-dot"></i> {{ . }}</div>
+        {{ end }}
         {{ with .Params.film }}
           <div class="spec"><i class="fa-solid fa-film"></i> {{ . }}</div>
         {{ end }}
