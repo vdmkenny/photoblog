@@ -2,7 +2,7 @@
 date = '2024-08-30'
 draft = false
 title = 'Pentax 17 Test'
-description = 'First attempt with this new camera.'
+description = 'Eerste poging met deze splinternieuwe filmcamera.'
 camera = 'Pentax 17'
 film = 'Vervallen Fujifilm?'
 cover = 'Untitled_63.jpg'
