@@ -11,5 +11,6 @@ cover = 'img20250521_12093595.jpg'
 
 Tijdens een photowalk in Gent met Ierejjet kreeg ik deze Pentax 67II in mijn handen geduwd. Niet de meest interessante foto's die ik ooit gemaakt heb, wel een kanon van een camera.
 Duidelijk een camera waar ik aan het gewicht zou moeten wennen. Elke horizon was scheef, en moest bijgecropt worden.
+Desondanks begin ik wel uit te kijken naar een goede medium format SLR voor mezelf...
 
 {{< rollgallery >}}
