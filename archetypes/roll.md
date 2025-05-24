@@ -7,6 +7,7 @@ cover: ""
 film:       ""     # e.g. "Portra 400"
 camera:     ""     # e.g. "Canon AE-1"
 lens:       ""     # e.g. "50mm f/1.8"
+location:   ""
 # no image param; Hugo will pick up all JPGs in the bundle
 ---
 

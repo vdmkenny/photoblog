@@ -6,6 +6,7 @@ description = 'First attempt with this new camera.'
 camera = 'Pentax 17'
 film = 'Vervallen Fujifilm?'
 cover = 'Untitled_63.jpg'
+location = 'Verschillende locaties'
 +++
 
 Ik herinner me niet meer welke film dit was. Hoogstwaarschijnlijk zeer vervallen Fujifilm (C200?) die niet goed bewaard is. 

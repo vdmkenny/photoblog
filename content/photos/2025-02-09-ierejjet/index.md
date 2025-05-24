@@ -7,6 +7,7 @@ cover = 'IMAG1101.jpg'
 film = 'Lomography Potsdam Kino 100iso'
 camera = 'Chinon CE-3 Memotron'
 lens = 'Chinon Auto 55mm f1.7'
+location = 'Aalst'
 +++
 
 Ontwikkeld in rodinal met vrij hard water. Wat kalkresten zichtbaar op de negatieven.
