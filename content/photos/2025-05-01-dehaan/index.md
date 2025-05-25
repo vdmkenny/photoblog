@@ -15,6 +15,6 @@ Een paar duinen rond De Haan. Moest sneller dan verwacht vertrekken, vandaar maa
 Ben er nog steeds niet uit of ik fan ben van HP5+ in rodinal. Zeer korrelig resultaat, maar "het is een vibe" zoals ze zeggen.
 
 Wat lompheid en ongeduld tot de negatieven droog waren leverden wat krasjes op.
-Enkele witte vegen waar ik geen verklaring voor heb. Lens flare op de filter?
+Enkele witte vegen waar ik geen verklaring voor heb. Lens flare op de rode filter?
 
 {{< rollgallery >}}
