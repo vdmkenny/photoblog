@@ -1,4 +1,4 @@
-baseURL = "https://vdmkenny.github.io/photoblog/"
+baseURL = "https://photoblog.kvandemaele.be/"
 #baseURL = "http://localhost:1313/"
 languageCode = "be-NL"
 title = "Lost in the Grain"
