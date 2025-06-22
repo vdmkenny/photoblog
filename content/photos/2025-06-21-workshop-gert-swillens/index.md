@@ -15,4 +15,6 @@ Resultaten van het praktische deel van een workshop straatfotografie Gert Swille
 Gelukkig kreeg ik deze Canon F-1 (old?) in mijn handen geduwd, en kon ik de workshop verder zetten met deze tank van een camera. Helaas had ik beter de instellingen van de camera moeten bekeken hebben, ik heb de hele rol op EV +4 stops genomen.
 Het resultaat hiervan zijn heel overexposed negatieven, sommigen ervan kon ik enkel redden door meerdere scans op verschillende helderheden te combineren tot een HDR afbeelding.
 
+Tot op heden heb ik nooit veel foto's gemaakt met mensen als onderwerp, op enkele portret oefeningen na. De workshop van Gert was enorm behulpzaam om mij uit mijn comfort zone te halen, en een nieuw oog te kweken voor dergelijke foto's. Aanrader!
+
 {{< rollgallery >}}
